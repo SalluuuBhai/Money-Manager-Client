@@ -1,0 +1,34 @@
+.btn {
+  color: rgb(241, 243, 245);
+  background-color: #266cec;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px 15px 5px 15px;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-inline {
+  width: 85%;
+  border: 2px solid rgb(201, 201, 201);
+}
+
+.mb-3 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.form-label {
+  font-size: larger;
+  font-weight: 500;
+  color: rgb(27, 53, 15);
+}
+
+.heading1 {
+  padding: 5px;
+}
