@@ -26,7 +26,7 @@ const Expense = () => {
   const handleSubmit = async (e) => {
     // const navigate = useNavigate();
     e.preventDefault();
-    history.push("/");
+   
     console.log("Form data submitted:", formData);
     // navigate('/');
 
@@ -41,6 +41,7 @@ const Expense = () => {
         type: "Select Expense",
         comment: "",
       });
+      history.push("/");
     } catch (error) {
       console.error("Error adding Expense:", error);
     }
@@ -62,7 +63,7 @@ const Expense = () => {
                 className="form-control"
                 id="title"
                 name="title"
-                placeholder="Salary Title"
+                placeholder="Expense Title"
                 value={formData.title}
                 onChange={handleChange}
               />

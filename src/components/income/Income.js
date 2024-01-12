@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import { Form, FormControl } from "react-bootstrap";
 import Sidebar from "../sidebar/Sidebar";
 import React, { useState } from "react";
 import { addIncome } from "../../api/api";
@@ -25,7 +25,7 @@ const Income = () => {
   const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    history.push("/");
+    
     console.log("Form data submitted:", formData);
 
     // Add additional logic for form submission, such as sending data to a server.
@@ -39,6 +39,7 @@ const Income = () => {
         type: "Select Income",
         comment: "",
       });
+      history.push("/");
     } catch (error) {
       console.error("Error adding income:", error);
     }
@@ -123,9 +124,9 @@ const Income = () => {
               <label htmlFor="comment" className="form-label">
                 Comment
               </label>
-              <input
-                type="textarea"
-                className="form-control"
+              <FormControl
+                as="textarea"
+                rows={3}
                 id="comment"
                 name="comment"
                 placeholder="Add A Reference"
